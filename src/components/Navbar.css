@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
 
 display:flex;
 
@@ -71,5 +71,87 @@ color:white;
 .theme-btn:hover{
 
 opacity:0.9;
+
+} */
+
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 40px;
+
+background:white;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:25px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+font-size:16px;
+
+color:black;
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:bold;
+
+
+}
+
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:10px 15px;
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+font-size:18px;
+
+}
+
+.nav-links{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+
+}
+
+.nav-links a{
+
+font-size:14px;
+
+}
 
 }
