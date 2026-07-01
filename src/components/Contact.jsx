@@ -32,11 +32,10 @@ function Contact() {
 
     try {
 
-      const response = await axios.post(
-  "https://my-portfolio-backend-3-nub3.onrender.com/api/contact",
+   const response = await axios.post(
+  "https://my-portfolio-backend-1-bxn3.onrender.com/api/contact",
   formData
 );
-
       setSuccess(response.data.message);
 
       setFormData({
