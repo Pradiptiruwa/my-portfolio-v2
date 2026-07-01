@@ -1,38 +1,142 @@
+import { useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import "./Contact.css";
 
-function Contact(){
+function Contact() {
 
-return(
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
 
-<motion.section
-  className="contact"
-  id="contact"
-  initial={{ opacity: 0, x: 100 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
->
-<h2>Contact</h2>
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
-<form>
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-<input placeholder="Name"/>
+  const handleSubmit = async (e) => {
 
-<input placeholder="Email"/>
+    e.preventDefault();
 
-<textarea placeholder="Message"/>
+    setLoading(true);
+    setSuccess("");
+    setError("");
 
-<button>
+    try {
 
-Send Message
+      const response = await axios.post(
+        "https://portfolio-backend.onrender.com/api/contact",
+        formData
+      );
 
-</button>
+      setSuccess(response.data.message);
 
-</form>
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
 
-</motion.section>
-)
+    }
+    catch (err) {
+
+      console.log(err);
+
+      setError(
+        err.response?.data?.message ||
+        err.message ||
+        "Failed to send message"
+      );
+
+    }
+    finally {
+
+      setLoading(false);
+
+    }
+
+  };
+
+  return (
+
+    <motion.section
+      className="contact"
+      id="contact"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+
+      <h2>Contact Me</h2>
+
+      <form onSubmit={handleSubmit}>
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="6"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+
+        <button type="submit">
+
+          {loading ? "Sending..." : "Send Message"}
+
+        </button>
+
+      </form>
+
+      {success && (
+
+        <p className="success">
+
+          {success}
+
+        </p>
+
+      )}
+
+      {error && (
+
+        <p className="error">
+
+          {error}
+
+        </p>
+
+      )}
+
+    </motion.section>
+
+  );
 
 }
 

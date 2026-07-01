@@ -1,43 +1,66 @@
+// import "./Footer.css";
+// import { motion } from "framer-motion";
+
+// function Footer() {
+//   return (
+
+//     <motion.footer
+//       className="footer"
+
+//       initial={{ opacity: 0, y: 50 }}
+
+//       whileInView={{
+//         opacity: 1,
+//         y: 0
+//       }}
+
+//       transition={{
+//         duration: 1
+//       }}
+
+//       viewport={{
+//         once: true
+//       }}
+//     >
+
+//       <h3>
+//         Pradip Tiruwa
+//       </h3>
+
+//       <p>
+//         BIT Student | Full Stack Developer
+//       </p>
+
+//       <p>
+//         © 2026 All Rights Reserved.
+//       </p>
+
+//     </motion.footer>
+
+//   );
+// }
+
+// export default Footer;
+
+
 import "./Footer.css";
-import { motion } from "framer-motion";
 
 function Footer() {
-  return (
 
-    <motion.footer
-      className="footer"
+return (
 
-      initial={{ opacity: 0, y: 50 }}
+<footer className="footer">
 
-      whileInView={{
-        opacity: 1,
-        y: 0
-      }}
+<h3>Pradip Tiruwa</h3>
 
-      transition={{
-        duration: 1
-      }}
+<p>BIT Student | MERN Developer</p>
 
-      viewport={{
-        once: true
-      }}
-    >
+<p>© 2026 All Rights Reserved</p>
 
-      <h3>
-        Pradip Tiruwa
-      </h3>
+</footer>
 
-      <p>
-        BIT Student | Full Stack Developer
-      </p>
+);
 
-      <p>
-        © 2026 All Rights Reserved.
-      </p>
-
-    </motion.footer>
-
-  );
 }
 
 export default Footer;
