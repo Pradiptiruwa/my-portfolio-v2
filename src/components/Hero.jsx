@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import "./Hero.css";
 
 import profile from "../assets/profile.jpg";
+// import profile from "../assets/profile.jpg"
+<img src={profile} />
+
 
 import {
   FaGithub,
