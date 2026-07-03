@@ -1,37 +1,63 @@
 import { motion } from "framer-motion";
 import "./Skills.css";
 
-function Skills(){
+function Skills() {
 
-return(
+const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "Git",
+  "GitHub",
+  "VS Code",
+  "UI/UX Design",
+  "Figma",
+  "Responsive Design"
+];
+
+return (
+
 <motion.section
-  className="skills"
-  id="skills"
-  initial={{ opacity: 0, x: -100 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
+className="skills"
+id="skills"
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.8 }}
+viewport={{ once: true }}
 >
 
 <h2>Skills</h2>
 
+<p className="skills-text">
+
+Technologies and tools I am currently learning and using in my Full Stack Development journey.
+
+</p>
+
 <div className="skills-container">
 
-<div className="skill-card">HTML</div>
+{skills.map((skill,index)=>(
 
-<div className="skill-card">CSS</div>
+<div
+key={index}
+className="skill-card"
+>
 
-<div className="skill-card">JavaScript</div>
+{skill}
 
-<div className="skill-card">React</div>
+</div>
 
-<div className="skill-card">Node.js</div>
-
-<div className="skill-card">MongoDB</div>
+))}
 
 </div>
 
 </motion.section>
+
 )
 
 }

@@ -26,7 +26,7 @@ function Hero() {
       />
 
       <h1>
-        Hello, I'm Pradip Tiruwa 👋
+        Hello, I'm Pradip Sunar 👋
       </h1>
 
       <h2>
@@ -34,11 +34,7 @@ function Hero() {
       </h2>
 
       <p>
-        I am a BIT student passionate about
-        Full Stack Development, Web Technologies,
-        Software Engineering and MERN Stack.
-        I enjoy building modern, responsive
-        and user-friendly web applications.
+        Passionate about Full Stack Development, UI/UX Design, and modern web technologies. Currently exploring the MERN Stack and building responsive, user-friendly web applications while continuously improving my technical and problem-solving skills.
       </p>
 
       <div className="buttons">

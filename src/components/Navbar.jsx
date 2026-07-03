@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
-        Pradip Tiruwa
+        Pradip Sunar
       </div>
 
       <ul className="nav-links">
