@@ -30,8 +30,7 @@ function Hero() {
       </h1>
 
       <h2>
-        BIT Student | Full Stack Developer
-      </h2>
+BIT Student | Aspiring Full Stack Developer | UI/UX Enthusiast      </h2>
 
       <p>
         Passionate about Full Stack Development, UI/UX Design, and modern web technologies. Currently exploring the MERN Stack and building responsive, user-friendly web applications while continuously improving my technical and problem-solving skills.

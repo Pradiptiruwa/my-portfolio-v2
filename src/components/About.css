@@ -5,3 +5,8 @@ padding:80px 20px;
 text-align:center;
 
 }
+.about p{
+max-width:850px;
+margin:auto;
+line-height:1.8;
+}

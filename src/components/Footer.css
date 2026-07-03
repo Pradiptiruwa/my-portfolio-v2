@@ -1,4 +1,4 @@
-/* 
+/* /* 
 
 */
 
@@ -25,5 +25,34 @@ margin-bottom:10px;
 .footer p{
 
 margin:5px 0;
+
+} */
+
+
+footer{
+
+background:#07152c;
+
+padding:50px;
+
+text-align:center;
+
+color:white;
+
+margin-top:100px;
+
+}
+
+footer h2{
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+margin:8px;
+
+color:#ccc;
 
 }
