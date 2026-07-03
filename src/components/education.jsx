@@ -38,7 +38,7 @@ Texas College of Management and IT
 
 Focused on Full Stack Development,
 UI/UX Design, Database Systems,
-Software Engineering and modern web technologies.
+Software Engineering and modern web technologies and AI.
 
 </p>
 
