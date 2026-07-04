@@ -1,6 +1,6 @@
-import "./Hero.css";
+import "./Hero.css"
 
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile.jpg"
 
 import {
 
@@ -10,126 +10,208 @@ FaLinkedin,
 
 FaFacebook
 
-} from "react-icons/fa";
+} from "react-icons/fa"
+
+import { motion } from "framer-motion"
 
 function Hero(){
 
 return(
 
-<section
+<motion.section
 
 className="hero"
 
 id="home"
 
+initial={{opacity:0,y:50}}
+
+animate={{opacity:1,y:0}}
+
+transition={{duration:1}}
+
 >
 
-<img
+<motion.img
 
 src={profile}
 
-alt="Pradip Tiruwa"
+alt="profile"
 
 className="profile"
 
-/>
+initial={{scale:0}}
 
-<h1>
+animate={{scale:1}}
 
-Hello, I'm Pradip Sunar 👋
+transition={{
 
-</h1>
+duration:1,
 
-<h2>
+type:"spring"
 
-BIT Student | Aspiring Full Stack Developer
+}}
 
-</h2>
+whileHover={{
 
-<p>
+scale:1.1
 
-Passionate about Full Stack Development,
+}}
 
-UI/UX Design and MERN Stack.
+ />
 
-</p>
+<motion.h1
 
-<div className="buttons">
+initial={{opacity:0}}
 
-<button className="primary-btn">
+animate={{opacity:1}}
 
-View Projects
-
-</button>
-
-<a
-
-href="/resume.pdf"
-
-download
+transition={{delay:0.4}}
 
 >
 
-<button className="secondary-btn">
+Hello, I'm Pradip Sunar 👋
+
+</motion.h1>
+
+<motion.h2
+
+initial={{opacity:0}}
+
+animate={{opacity:1}}
+
+transition={{delay:0.6}}
+
+>
+
+BIT Student | Full Stack Developer
+
+</motion.h2>
+
+<motion.p
+
+initial={{opacity:0}}
+
+animate={{opacity:1}}
+
+transition={{delay:0.8}}
+
+>
+
+Passionate about MERN Stack Development and UI/UX Design.
+
+</motion.p>
+
+<div className="buttons">
+
+<motion.button
+
+whileHover={{
+
+scale:1.05
+
+}}
+
+whileTap={{
+
+scale:0.95
+
+}}
+
+className="primary-btn"
+
+>
+
+View Projects
+
+</motion.button>
+
+<motion.button
+
+whileHover={{
+
+scale:1.05
+
+}}
+
+whileTap={{
+
+scale:0.95
+
+}}
+
+className="secondary-btn"
+
+>
 
 Download CV
 
-</button>
-
-</a>
+</motion.button>
 
 </div>
 
 <div className="social-icons">
 
-<a
+<motion.a
 
-href="https://github.com/Pradiptiruwa"
+whileHover={{
 
-target="_blank"
+scale:1.3,
 
-rel="noreferrer"
+rotate:360
+
+}}
+
+href="#"
 
 >
 
 <FaGithub/>
 
-</a>
+</motion.a>
 
-<a
+<motion.a
 
-href="https://linkedin.com"
+whileHover={{
 
-target="_blank"
+scale:1.3,
 
-rel="noreferrer"
+rotate:360
+
+}}
+
+href="#"
 
 >
 
 <FaLinkedin/>
 
-</a>
+</motion.a>
 
-<a
+<motion.a
 
-href="https://facebook.com"
+whileHover={{
 
-target="_blank"
+scale:1.3,
 
-rel="noreferrer"
+rotate:360
+
+}}
+
+href="#"
 
 >
 
 <FaFacebook/>
 
-</a>
+</motion.a>
 
 </div>
 
-</section>
+</motion.section>
 
 )
 
 }
 
-export default Hero;
+export default Hero

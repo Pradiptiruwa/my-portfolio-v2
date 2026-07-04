@@ -1,54 +1,71 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import "./Navbar.css";
 
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleTheme = () => {
-    document.body.classList.toggle("dark");
-    setDarkMode(!darkMode);
-  };
+const [darkMode,setDarkMode]=useState(false);
 
-  return (
-    <nav className="navbar">
+const toggleTheme=()=>{
 
-      <div className="logo">
-        Pradip Sunar
-      </div>
+document.body.classList.toggle("dark");
 
-      <ul className="nav-links">
+setDarkMode(!darkMode);
 
-        <li>
-          <a href="#home">Home</a>
-        </li>
+};
 
-        <li>
-          <a href="#about">About</a>
-        </li>
+return(
 
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
+<motion.nav
 
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
+className="navbar"
 
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+initial={{y:-100}}
 
-      </ul>
+animate={{y:0}}
 
-      <button
-        className="theme-btn"
-        onClick={toggleTheme}
-      >
-        {darkMode ? "☀️" : "🌙"}
-      </button>
+transition={{duration:0.7}}
 
-    </nav>
-  );
+>
+
+<div className="logo">
+
+Pradip Sunar
+
+</div>
+
+<ul className="nav-links">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<button
+
+className="theme-btn"
+
+onClick={toggleTheme}
+
+>
+
+{darkMode ? "☀️":"🌙"}
+
+</button>
+
+</motion.nav>
+
+)
+
 }
 
-export default Navbar;
+export default Navbar

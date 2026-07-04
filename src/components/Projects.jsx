@@ -1,39 +1,96 @@
-import { motion } from "framer-motion";
-import "./Projects.css";
+import "./Projects.css"
+
+import { motion } from "framer-motion"
 
 function Projects(){
 
 return(
 
 <motion.section
-  className="projects"
-  id="projects"
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
+
+className="projects"
+
+id="projects"
+
+initial={{opacity:0}}
+
+whileInView={{opacity:1}}
+
+transition={{duration:1}}
+
+viewport={{once:true}}
+
 >
-<h2>Projects</h2>
+
+<h2>
+
+Projects
+
+</h2>
 
 <div className="project-container">
 
-<div className="project-card">
+<motion.div
+
+className="project-card"
+
+whileHover={{
+
+y:-10,
+
+scale:1.04
+
+}}
+
+>
 
 Portfolio Website
 
-</div>
+</motion.div>
 
-<div className="project-card">
+<motion.div
+
+className="project-card"
+
+whileHover={{
+
+y:-10,
+
+scale:1.04
+
+}}
+
+>
 
 Student Management System
 
-</div>
+</motion.div>
+
+
+<motion.div
+
+className="project-card"
+
+whileHover={{
+
+y:-10,
+
+scale:1.04
+
+}}
+
+>
+
+One Way Church Website
+</motion.div>
+
 
 </div>
 
 </motion.section>
+
 )
 
 }
 
-export default Projects;
+export default Projects

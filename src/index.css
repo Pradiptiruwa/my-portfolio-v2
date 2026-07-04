@@ -1,47 +1,93 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+body.dark{
 
-html{
-scroll-behavior:smooth;
-}
+background:#111827;
 
-body{
-
-font-family:Arial, Helvetica, sans-serif;
-
-background:#f8fafc;
-
-color:#111827;
-
-overflow-x:hidden;
+color:white;
 
 }
 
-img{
+body.dark .navbar{
 
-max-width:100%;
-
-display:block;
+background:#1f2937;
 
 }
 
-section{
+body.dark .nav-links a{
 
-width:100%;
-
-}
-
-a{
-
-text-decoration:none;
+color:white;
 
 }
 
-button{
+body.dark .hero p{
 
-font-family:inherit;
+color:#d1d5db;
+
+}
+
+body.dark .about p{
+
+color:#d1d5db;
+
+}
+
+body.dark .edu-card{
+
+background:#1f2937;
+
+color:white;
+
+}
+
+body.dark .skill-card{
+
+background:#1f2937;
+
+color:white;
+
+}body.dark{
+
+background:#111827;
+
+color:white;
+
+}
+
+body.dark .navbar{
+
+background:#1f2937;
+
+}
+
+body.dark .nav-links a{
+
+color:white;
+
+}
+
+body.dark .hero p{
+
+color:#d1d5db;
+
+}
+
+body.dark .about p{
+
+color:#d1d5db;
+
+}
+
+body.dark .edu-card{
+
+background:#1f2937;
+
+color:white;
+
+}
+
+body.dark .skill-card{
+
+background:#1f2937;
+
+color:white;
 
 }

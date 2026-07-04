@@ -1,24 +1,53 @@
-import "./Education.css";
+import "./Education.css"
 
-function Education() {
+import { motion } from "framer-motion"
 
-return (
+function Education(){
 
-<section className="education" id="education">
+return(
 
-<h2>Education</h2>
+<motion.section
+
+className="education"
+
+id="education"
+
+initial={{opacity:0,y:60}}
+
+whileInView={{opacity:1,y:0}}
+
+transition={{duration:0.8}}
+
+viewport={{once:true}}
+
+>
+
+<h2>
+
+Education
+
+</h2>
 
 <p className="subtitle">
 
 My academic journey and learning path.
-
 </p>
 
-<div className="edu-card">
+<motion.div
+
+className="edu-card"
+
+whileHover={{
+
+scale:1.03
+
+}}
+
+>
 
 <h3>
 
-Bachelor of Information Technology (BIT)
+Bachelor of Information Technology
 
 </h3>
 
@@ -36,18 +65,15 @@ Texas College of Management and IT
 
 <p>
 
-Focused on Full Stack Development,
-UI/UX Design, Database Systems,
-Software Engineering and modern web technologies and AI.
-
+Focused on Full Stack Development, UI/UX Design, Database Systems, Software Engineering and modern web technologies and AI.
 </p>
 
-</div>
+</motion.div>
 
-</section>
+</motion.section>
 
 )
 
 }
 
-export default Education;
+export default Education

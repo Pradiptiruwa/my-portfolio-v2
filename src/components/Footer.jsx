@@ -1,21 +1,47 @@
-import "./Footer.css";
+import "./Footer.css"
+
+import { motion } from "framer-motion"
 
 function Footer(){
 
 return(
 
-<footer className="footer">
+<motion.footer
 
-<h3>Pradip Tiruwa</h3>
+className="footer"
 
-<p>BIT Student | MERN Developer</p>
+initial={{opacity:0}}
 
-<p>© 2026 All Rights Reserved</p>
+whileInView={{opacity:1}}
 
-</footer>
+transition={{duration:1}}
+
+viewport={{once:true}}
+
+>
+
+<h3>
+
+Pradip Sunar
+
+</h3>
+
+<p>
+
+BIT Student | MERN Developer
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</motion.footer>
 
 )
 
 }
 
-export default Footer;
+export default Footer

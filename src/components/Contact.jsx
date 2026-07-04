@@ -16,10 +16,12 @@ function Contact() {
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+
   };
 
   const handleSubmit = async (e) => {
@@ -32,30 +34,42 @@ function Contact() {
 
     try {
 
-   const response = await axios.post(
-  "https://my-portfolio-backend-1-bxn3.onrender.com/api/contact",
-  formData
-);
+      const response = await axios.post(
+
+        "https://my-portfolio-backend-1-bxn3.onrender.com/api/contact",
+
+        formData
+
+      );
+
       setSuccess(response.data.message);
 
       setFormData({
+
         name: "",
         email: "",
         message: ""
+
       });
 
     }
+
     catch (err) {
 
       console.log(err);
 
       setError(
+
         err.response?.data?.message ||
+
         err.message ||
+
         "Failed to send message"
+
       );
 
     }
+
     finally {
 
       setLoading(false);
@@ -67,11 +81,19 @@ function Contact() {
   return (
 
     <motion.section
+
       className="contact"
+
       id="contact"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+
+      initial={{ opacity: 0, y: 50 }}
+
+      whileInView={{ opacity: 1, y: 0 }}
+
+      transition={{ duration: 0.8 }}
+
+      viewport={{ once: true }}
+
     >
 
       <h2>Contact Me</h2>
@@ -79,61 +101,119 @@ function Contact() {
       <form onSubmit={handleSubmit}>
 
         <input
+
           type="text"
+
           name="name"
+
           placeholder="Your Name"
+
           value={formData.name}
+
           onChange={handleChange}
+
           required
+
         />
 
         <input
+
           type="email"
+
           name="email"
+
           placeholder="Your Email"
+
           value={formData.email}
+
           onChange={handleChange}
+
           required
+
         />
 
         <textarea
+
           name="message"
+
           placeholder="Your Message"
+
           rows="6"
+
           value={formData.message}
+
           onChange={handleChange}
+
           required
+
         />
 
-        <button type="submit">
+        <button
 
-          {loading ? "Sending..." : "Send Message"}
+          type="submit"
+
+          disabled={loading}
+
+        >
+
+          {
+
+            loading
+
+              ? "Sending..."
+
+              : "Send Message"
+
+          }
 
         </button>
 
       </form>
 
-      {success && (
+      {
 
-        <p className="success">
+        success && (
 
-          {success}
+          <p className="success">
 
-        </p>
+            {success}
 
-      )}
+          </p>
 
-      {error && (
+        )
 
-        <p className="error">
+      }
 
-          {error}
+      {
 
-        </p>
+        error && (
 
-      )}
+          <p className="error">
 
-    </motion.section>
+            {error}
+
+          </p>
+
+        )
+
+      }
+
+
+<motion.section
+
+className="contact"
+
+id="contact"
+
+initial={{opacity:0}}
+
+whileInView={{opacity:1}}
+
+transition={{duration:1}}
+
+viewport={{once:true}}
+
+    ></motion.section></motion.section>
 
   );
 

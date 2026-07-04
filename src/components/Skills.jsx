@@ -1,58 +1,102 @@
-import { motion } from "framer-motion";
-import "./Skills.css";
+import "./Skills.css"
 
-function Skills() {
+import { motion } from "framer-motion"
 
-const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "React",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Mongoose",
-  "Git",
-  "GitHub",
-  "VS Code",
-  "UI/UX Design",
-  "Figma",
-  "Responsive Design"
-];
+function Skills(){
 
-return (
+const skills=[
+
+"HTML",
+
+"CSS",
+
+"JavaScript",
+
+"React",
+
+"Node.js",
+
+"MongoDB",
+
+"Mongoose",
+
+"Express.js",
+
+"Git",
+
+"GitHub",
+
+"Figma(UI/UX DESIGN)",
+
+"VS code",
+
+"Responsive Design"
+
+]
+
+return(
 
 <motion.section
+
 className="skills"
+
 id="skills"
-initial={{ opacity: 0, y: 50 }}
-whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+
+initial={{opacity:0}}
+
+whileInView={{opacity:1}}
+
+transition={{duration:1}}
+
+viewport={{once:true}}
+
 >
 
-<h2>Skills</h2>
+<h2>
 
-<p className="skills-text">
+Skills
 
-Technologies and tools I am currently learning and using in my Full Stack Development journey.
+</h2>
+
+<p>Technologies and tools I am currently learning and using in my Full Stack Development journey.
 
 </p>
 
 <div className="skills-container">
 
-{skills.map((skill,index)=>(
+{
 
-<div
+skills.map((skill,index)=>(
+
+<motion.div
+
 key={index}
+
 className="skill-card"
+
+whileHover={{
+
+scale:1.1,
+
+y:-8
+
+}}
+
+whileTap={{
+
+scale:0.95
+
+}}
+
 >
 
 {skill}
 
-</div>
+</motion.div>
 
-))}
+))
+
+}
 
 </div>
 
@@ -62,6 +106,4 @@ className="skill-card"
 
 }
 
-export default Skills;
-
-
+export default Skills
