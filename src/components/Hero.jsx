@@ -1,91 +1,135 @@
-import { motion } from "framer-motion";
 import "./Hero.css";
 
 import profile from "../assets/profile.jpg";
-<img src={profile} />
-
 
 import {
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
+
+FaGithub,
+
+FaLinkedin,
+
+FaFacebook
+
 } from "react-icons/fa";
 
-function Hero() {
-  return (
-    <motion.section
-  className="hero"
-  id="home"
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
+function Hero(){
+
+return(
+
+<section
+
+className="hero"
+
+id="home"
+
 >
 
-      <img
-        src={profile}
-        alt="Pradip Tiruwa"
-        className="profile"
-      />
+<img
 
-      <h1>
-        Hello, I'm Pradip Sunar 👋
-      </h1>
+src={profile}
 
-      <h2>
-BIT Student | Aspiring Full Stack Developer | UI/UX Enthusiast      </h2>
+alt="Pradip Tiruwa"
 
-      <p>
-        Passionate about Full Stack Development, UI/UX Design, and modern web technologies. Currently exploring the MERN Stack and building responsive, user-friendly web applications while continuously improving my technical and problem-solving skills.
-      </p>
+className="profile"
 
-      <div className="buttons">
+/>
 
-        <button className="primary-btn">
-          View Projects
-        </button>
+<h1>
 
-        <a
-          href="/resume.pdf"
-          download
-        >
+Hello, I'm Pradip Sunar 👋
 
-          <button className="secondary-btn">
-            Download CV
-          </button>
+</h1>
 
-        </a>
+<h2>
 
-      </div>
+BIT Student | Aspiring Full Stack Developer
 
-      <div className="social-icons">
+</h2>
 
-        <a
-          href="https://github.com/Pradiptiruwa"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
+<p>
 
-        <a
-          href="https://www.linkedin.com/feed/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
+Passionate about Full Stack Development,
 
-        <a
-          href="https://www.facebook.com/pts wd"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebook />
-        </a>
+UI/UX Design and MERN Stack.
 
-      </div>
+</p>
 
-</motion.section>  );
+<div className="buttons">
+
+<button className="primary-btn">
+
+View Projects
+
+</button>
+
+<a
+
+href="/resume.pdf"
+
+download
+
+>
+
+<button className="secondary-btn">
+
+Download CV
+
+</button>
+
+</a>
+
+</div>
+
+<div className="social-icons">
+
+<a
+
+href="https://github.com/Pradiptiruwa"
+
+target="_blank"
+
+rel="noreferrer"
+
+>
+
+<FaGithub/>
+
+</a>
+
+<a
+
+href="https://linkedin.com"
+
+target="_blank"
+
+rel="noreferrer"
+
+>
+
+<FaLinkedin/>
+
+</a>
+
+<a
+
+href="https://facebook.com"
+
+target="_blank"
+
+rel="noreferrer"
+
+>
+
+<FaFacebook/>
+
+</a>
+
+</div>
+
+</section>
+
+)
+
 }
 
 export default Hero;

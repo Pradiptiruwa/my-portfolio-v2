@@ -1,36 +1,8 @@
-/*
 .footer{
-
-padding:30px;
-
-text-align:center;
-
-background:#111827;
-
-color:white;
-
-margin-top:50px;
-
-}
-
-.footer h3{
-
-margin-bottom:10px;
-
-}
-
-.footer p{
-
-margin:5px 0;
-
-}
-*/
-
-footer{
 
 background:#07152c;
 
-padding:50px;
+padding:50px 20px;
 
 text-align:center;
 
@@ -40,16 +12,40 @@ margin-top:100px;
 
 }
 
-footer h2{
+.footer h3{
 
 margin-bottom:15px;
 
+font-size:24px;
+
 }
 
-footer p{
+.footer p{
 
-margin:8px;
+margin:8px 0;
 
 color:#ccc;
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+padding:40px 20px;
+
+}
+
+.footer h3{
+
+font-size:20px;
+
+}
+
+.footer p{
+
+font-size:14px;
+
+}
 
 }
